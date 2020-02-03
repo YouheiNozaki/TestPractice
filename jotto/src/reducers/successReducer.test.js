@@ -1,5 +1,5 @@
 import { actionTypes } from '../actions';
-import successReducer from './successReducers';
+import successReducer from './successReducer';
 
 test('returns default initial state of `false` when action is passed', () => {
   const newState = successReducer(undefined, {});
