@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 
 import { findByTestAttr, storeFactory } from '../test/testUtils';
 import Input, { UnconnectedInput } from './Input';
-import { italic } from 'ansi-colors';
 
 /**
  * Factory function to create a ShallowWrapper for the GuessedWords component.
@@ -98,5 +97,8 @@ describe('`guessWord` action creator call', () => {
   test('calls `guessWord with input value as argument`', () => {
     const guessWordArg = guessWordMock.mock.calls[0][0];
     expect(guessWordArg).toBe(guessedWord);
+  });
+  test('input box clears on submit', () => {
+    expect(wrapper.state('currentGuess')).toBe('');
   });
 });
