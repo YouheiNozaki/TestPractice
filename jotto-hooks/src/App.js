@@ -17,6 +17,7 @@ function reducer(state, action) {
       throw new Error(`Invalid action type: ${action.type}`);
   }
 }
+
 function App() {
   const [state, dispatch] = React.useReducer(reducer, { secretWord: null });
 
